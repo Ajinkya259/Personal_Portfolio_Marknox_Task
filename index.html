@@ -76,24 +76,251 @@
                 </div>
                 <div class="featured-image">
                     <div class="image">
-                        <img src="" alt="avatar">
+                        <img src="assets/me.png" alt="avatar">
                     </div>
                 </div>
+            </section>
 
-
-
-
-
-
-
+<!-- -------------- ABOUT BOX ---------------- -->
+<section class="section" id="about">
+    <div class="top-header">
+        <h1>About Me</h1>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="about-info">
+                <h3>My introduction</h3>
+                <p>I have strong skills in HTML, CSS, and JavaScript, and I use modern frameworks and
+                    libraries to build interactive and responsive websites. My focus is on creating
+                    easy-to-use designs and smooth web experiences.
+                </p>
+                <div class="about-btn">
+                    <a href="assets/Ajinkya_Sambare_VIT.pdf" download="Ajinkya's Resume"
+                        class="uil uil-import about-btn">Download CV</a>
+                </div>
+            </div>
         </div>
-    
+        <div class="col">
+            <div class="skills-box">
+                <div class="skills-header">
+                    <h3>Frontend</h3>
+                </div>
+                <div class="skills-list">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Bootstrap</span>
+                    <span>Tailwind</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+
+                </div>
+            </div>
+            <div class="skills-box">
+                <div class="skills-header">
+                    <h3>Backend</h3>
+                </div>
+                <div class="skills-list">
+                    <span>JavaScript</span>
+                    <span>Java</span>
+                    <span>Python</span>
+                </div>
+            </div>
+            <div class="skills-box">
+                <div class="skills-header">
+                    <h3>Database</h3>
+                </div>
+                <div class="skills-list">
+                    <span>MySQL</span>
+                    <span>MongoDB</span>
+                    <span>Firebase</span>
+                    <span>PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section" id="projects">
+    <div class="top-header">
+        <h1>Projects</h1>
+    </div>
+    <div class="project-container">
+        <div class="project-box" onclick="openModal('modal1')">
+            <i class="uil uil-web-grid"></i>
+            <h3>Omegle Clone using WebRTC</h3>
+            <label>A real-time video chat platform that can enable anonymous connections and conversations using WebRTC technology.</label>
+        </div>
+        <div class="project-box" onclick="openModal('modal2')">
+            <i class="uil uil-shopping-cart"></i>
+            <h3>E-Commerce Platform</h3>
+            <label>A fully functional online store with payment integration.</label>
+        </div>
+        <div class="project-box" onclick="openModal('modal3')">
+            <i class="uil uil-database"></i>
+            <h3>Trim-Time</h3>
+            <label>A seamless barber appointment platform connecting customers with local salons for convenient, hassle-free bookings.</label>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Omegle Clone using WebRTC</h2>
+            <p>This project is a clone of the Omegle website using WebRTC. You can view it <a
+                    href="https://github.com/Ajinkya259/Omege-Clone-using-WebRTC" target="_blank">here</a>.</p>
+            <p>Features:</p>
+            <ul>
+                <li>Peer-to-Peer Connectivity: Fast, low-latency video chats without a central server.</li>
+                <li>WebRTC: Secure, high-quality real-time video and audio in-browser.  </li>
+                <li>Modern Interface: Responsive, intuitive design across all devices.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>E-Commerce Platform</h2>
+            <p>This project features a fully functional online store with payment integration<a
+                href="https://itsquickshop.netlify.app/" target="_blank" > here</a>.</p>
+            <p>Highlights:</p>
+            <ul>
+                <li>Product listing and filtering options.</li>
+                <li>Shopping cart functionality with real-time updates.</li>
+                <li>Secure payment processing with Stripe.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Trim-Time</h2>
+            <p>This project is a system that allow sallon owners to view & magange thier appointments and aslo 
+                helps customers to book appointment through internet.("Cureently Ongoing")<a
+                href="https://github.com/Ajinkya259/TrimTime" target="_blank">here</a></p>
+            <p>Key Features:</p>
+            <ul>
+                <li>Easy Booking: Effortlessly schedule appointments with local salons.</li>
+                <li>Service Listings: View detailed services and pricing for each salon.</li>
+                <li>Real-Time Availability: Instantly see and book available time slots.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script>
+    function myMenuFunction() {
+        var menuBtn = document.getElementById("myNavMenu");
+        menuBtn.className = (menuBtn.className === "nav-menu") ? "nav-menu responsive" : "nav-menu";
+    }
+
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function (event) {
+        const modals = document.getElementsByClassName('modal');
+        for (let i = 0; i < modals.length; i++) {
+            if (event.target == modals[i]) {
+                modals[i].style.display = "none";
+            }
+        }
+    }
+</script>
+</div>
+
+<!-- -------------- CONTACT BOX ---------------- -->
+
+<section class="section" id="contact">
+<div class="top-header">
+<h1>Get in touch</h1>
+<span>Do you have a project in your mind, contact me here</span>
+</div>
+<div class="row">
+<div class="col">
+    <div class="contact-info">
+        <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+        <p><i class="uil uil-envelope"></i> Email: ajinkyasambare259@gmail.com</p>
+        <p><i class="uil uil-phone"></i> Contact No. 8010089552</p>
+    </div>
+</div>
+<div class="col">
+    <div class="form-control">
+        <div class="form-inputs">
+            <input type="text" class="input-field" placeholder="Name" required>
+            <input type="text" class="input-field" placeholder="Email" required>
+        </div>
+        <div class="text-area">
+            <textarea placeholder="Message"></textarea>
+        </div>
+        <div class="form-button">
+            <button class="btn">Send <i class="uil uil-message"></i></button>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- --------------- FOOTER --------------- -->
+<footer>
+<div class="top-footer">
+<p>Ajinkya Sambare</p>
+</div>
+<div class="middle-footer">
+<ul class="footer-menu">
+    <li class="footer_menu_list">
+        <a href="#home">Home</a>
+    </li>
+    <li class="footer_menu_list">
+        <a href="#about">About</a>
+    </li>
+    <li class="footer_menu_list">
+        <a href="#projects">Projects</a>
+    </li>
+    <li class="footer_menu_list">
+        <a href="#contact">Contact</a>
+    </li>
+</ul>
+</div>
+<div class="footer-social-icons">
+<div class="icon">
+    <a href="https://www.instagram.com/Ajinkya__2517/" target="_blank">
+        <i class="uil uil-instagram"></i>
+</div></a>
+<div class="icon">
+    <a href="https://www.linkedin.com/in/ajinkya-sambare-7a8a6026b/" target="_blank">
+        <i class="uil uil-linkedin-alt"></i></a>
+</div>
+<div class="icon"><a href="https://github.com/ajinkya259" target="_blank"><i
+            class="uil uil-github-alt"></i></a></div>
+
+</div>
+<div class="bottom-footer">
+<p>Copyright &copy; <a href="#home" style="text-decoration: none;">Ajinkya Sambare</a> - All rights reserved
+</p>
+</div>
+</footer>
+
+</div>
 </body>
+
 </html>
+
 <!-- ----- TYPING JS Link ----- -->
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
 <!-- ----- SCROLL REVEAL JS Link----- -->
 <script src="https://unpkg.com/scrollreveal"></script>
+
 
 <script src="script.js"></script>
